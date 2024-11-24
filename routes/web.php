@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 //rutas publicas
@@ -22,5 +23,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/delelete/{id}', [PostController::class, 'destroy'])->name('post.delete');
+
 
 require __DIR__.'/auth.php';
