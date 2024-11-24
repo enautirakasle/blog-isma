@@ -40,6 +40,7 @@ class PostController extends Controller
             $path = Storage::putFile('public/images', $request->file('image'));
             $nuevo_path = str_replace('public/', '', $path);
             $post->image_url = $nuevo_path;
+            // echo('irudia bai');
         }
         $post->save();
         return redirect()->route('posts.index');

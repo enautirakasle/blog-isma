@@ -65,7 +65,20 @@
                     </div>
   
 
-                </div>
+                </div><!--fin modal-->
+
+                <table>
+                    <thead></thead>
+                    <tbody>
+                        @foreach ($posts as $post)
+                        <tr>
+                            <td>{{ $post->title}}</td>
+                            <td>{{ $post->body}}</td>
+                            <td><img src="/storage/{{ $post->image_url }}" alt=""></td>
+                        </tr>    
+                        @endforeach
+                        </tbody>
+                </table>
             </div>
         </div>
     </div>
