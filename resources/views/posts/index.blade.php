@@ -35,7 +35,7 @@
                                 <!-- Modal body -->
                                 <div class="p-4 md:p-5 space-y-4">
                                     <!-- create post form-->
-                                    <form class="max-w-sm mx-auto" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" class="max-w-sm mx-auto" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mb-5">
                                             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titulo</label>
